@@ -30,10 +30,10 @@
       "autoApprove": true
     },
     {
-      "description": "Auto-merge Go toolchain patch updates only",
+      "description": "Auto-merge Go toolchain patch and minor updates",
       "matchPackageNames": ["go"],
       "matchDatasources": ["golang-version"],
-      "matchUpdateTypes": ["patch"],
+      "matchUpdateTypes": ["patch", "minor"],
       "automerge": true,
       "autoApprove": true
     },
