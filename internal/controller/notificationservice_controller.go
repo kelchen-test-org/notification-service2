@@ -50,7 +50,7 @@ func (r *NotificationServiceReconciler) Reconcile(ctx context.Context, req ctrl.
 	logger := r.Log.WithName("Notification controller")
 	pipelineRun := &tektonv1.PipelineRun{}
 
-	err := r.Get(ctx, req.NamespacedName, pipelineRun)
+	err := r.Client.Get(ctx, req.NamespacedName, pipelineRun)
 	if err != nil {
 		logger.Error(err, "Failed to get pipelineRun for", "req", req.NamespacedName)
 		if errors.IsNotFound(err) {
