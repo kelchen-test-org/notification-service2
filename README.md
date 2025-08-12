@@ -140,50 +140,6 @@ spec:
 
 ## Define Topic and Region
 
-These environment variables will be used to define the `SNS topic` which the messages will 
-be sent to and the `region` of the AWS account.
+These environment variables will be used to define the `SNS topic`
 
-| Name | Description |
-| -- | -- |
-| NOTIFICATION_REGION | define the AWS region to use
-| NOTIFICATION_TOPIC_ARN | the topic arn the messages will be sent to
-
-## Running, building and testing the controller
-
-This controller provides a [Makefile](Makefile) to run all the usual development tasks. This file can be used by cloning
-the repository and running `make` over any of the provided targets.
-
-### Running the controller locally
-
-When testing locally, the command `make run install` can be used to deploy and run the controller. 
-If any change has been done in the code, `make manifests generate` should be executed before to generate the new resources
-and build the controller.
-
-### Build and push a new image
-
-To build the controller and push a new image to the registry, the following commands can be used: 
-
-```shell
-$ make docker-build
-$ make docker-push
-```
-
-These commands will use the default image and tag. To modify them, new values for `TAG` and `IMG` environment variables
-can be passed. For example, to override the tag:
-
-```shell
-$ TAG=my-tag make docker-build
-$ TAG=my-tag make docker-push
-```
-
-Or, in the case the image should be pushed to a different repository:
-
-```shell
-$ IMG=quay.io/user/release:my-tag make docker-build
-$ IMG=quay.io/user/release:my-tag make docker-push
-```
-
-### Running tests
-
-To test the code, run `make test`. This command will fetch all the required dependencies and test the code. The
-test coverage will be reported at the end, once all the tests have been executed.
+<!-- Dummy comment to trigger MintMaker bot activity -->
