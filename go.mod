@@ -12,7 +12,7 @@ require (
 	github.com/onsi/gomega v1.36.3
 	github.com/tektoncd/pipeline v1.3.1
 	k8s.io/apimachinery v0.32.7
-	k8s.io/client-go v0.32.7
+	k8s.io/client-go v11.0.0+incompatible
 	knative.dev/pkg v0.0.0-20250415155312-ed3e2158b883
 	sigs.k8s.io/controller-runtime v0.20.2
 
